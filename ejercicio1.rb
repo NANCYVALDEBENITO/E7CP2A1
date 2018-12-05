@@ -1,0 +1,10 @@
+a = [1, 2, 3, 9, 1, 4, 5, 2, 3, 6, 6]; print a
+b, c, d, f, g, i, j = []
+b = a.map { |e| e + 1 }; print " Ej 1. #{b}"
+c = a.map(&:to_f); print " Ej 2.#{c}"
+d = a.map(&:to_s); print " Ej 3. #{d}"
+f = a.reject { |e| e if e > 5 }; print " Ej 4. #{f}"
+g = a.select { |e| e if e > 5 }; print " Ej 5. #{g}"
+h = a.inject { |suma, e| suma + e }; print " Ej 6. #{h}"
+i = a.group_by { |e| (e % 2).zero? }; print " Ej 7. #{i}"
+j = a.group_by { |e| e < 6 }; print " Ej 8. #{j}"
